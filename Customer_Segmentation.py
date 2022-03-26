@@ -181,7 +181,7 @@ elif choice == 'Dự đoán':
                     scaler = RobustScaler()
                     df_scale = scaler.fit_transform(df)
                     df_scale = pd.DataFrame(df_scale, columns=df.columns)          
-                    y_pred_new = gmm_model.predict(df_scale)
+                    y_pred_new = gmm_model.predict(df)
                     print(y_pred_new)
                     if y_pred_new == 0:
                          st.code('Khách thông thường')
