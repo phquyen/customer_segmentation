@@ -1,0 +1,6 @@
+__pycache__
+venv
+.vscode
+ngrok.exe
+test.py 
+streamlit_project3.py 
