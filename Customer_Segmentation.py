@@ -180,9 +180,8 @@ elif choice == 'Dự đoán':
                     df = pd.DataFrame([{'Recency': recency, 'Frequency': frequency, 'Monetary': monetary}])
                     scaler = RobustScaler()
                     df_scale = scaler.fit_transform(df)
-                    df_scale = pd.DataFrame(df_scale, columns=df.columns)
-               
-                    y_pred_new = gmm_model.predict(df_scale)
+                    df_scale = pd.DataFrame(df_scale, columns=df.columns)          
+                    y_pred_new = gmm_model.predict(df)
                     print(y_pred_new)
                     if y_pred_new == 0:
                          st.code('Khách thông thường')
